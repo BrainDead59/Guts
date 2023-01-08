@@ -128,7 +128,7 @@ else:
 
                         item = pd.DataFrame(datos)
                         Resultado=ClasificacionRL.predict(item)
-                        with col9:
+                        with col8:
                             st.write('**El resultado de** '+str(variablePredect[0])+' **es:** '+str(Resultado[0]))
 
 
