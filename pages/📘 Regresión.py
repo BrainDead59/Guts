@@ -110,7 +110,7 @@ else:
                 col8, col9= st.columns(2)
 
                 with col8:
-                    valores = st.text_input('Inserta las variables predictoras, separadas por coma y espacio, en orden: Val1, Val2, etc')
+                    valores = st.text_input('Inserta el valor de las variables predictoras, separadas por coma y espacio, en orden: Val1, Val2, etc')
 
                 if len(valores)==0:
                     st.write(" ")
