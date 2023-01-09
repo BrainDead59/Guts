@@ -85,7 +85,8 @@ else:
     with tab2:
         col3, col4 = st.columns(2)
 
-        clusters = st.number_input('Inserta el numero de clusters')
+        with col3:
+            clusters = st.number_input('Inserta el numero de clusters')
         with col3:
             with st.expander("**Clusters**"):
                 if EstadoME==1:
