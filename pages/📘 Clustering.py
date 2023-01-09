@@ -85,10 +85,10 @@ else:
     with tab2:
         col3, col4 = st.columns(2)
 
+        clusters = st.number_input('Inserta el numero de clusters')
         with col3:
             with st.expander("**Clusters**"):
                 if EstadoME==1:
-                    clusters = st.number_input('Inserta el numero de clusters')
                     if clusters>0:
                         MJerarquico = AgglomerativeClustering(n_clusters=int(clusters), linkage='complete', affinity='euclidean')
                         MJerarquico.fit_predict(MEstandarizada)
