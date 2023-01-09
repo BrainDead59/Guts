@@ -87,10 +87,11 @@ else:
 
         with col3:
             clusters = st.number_input('Inserta el numero de clusters')
+
         with col3:
-            with st.expander("**Clusters**"):
-                if EstadoME==1:
-                    if clusters>0:
+            if EstadoME==1:
+                if clusters>0:
+                    with st.expander("**Clusters**"):
                         MJerarquico = AgglomerativeClustering(n_clusters=int(clusters), linkage='complete', affinity='euclidean')
                         MJerarquico.fit_predict(MEstandarizada)
 
@@ -98,8 +99,8 @@ else:
                         InformacionJ['clusterJ'] = MJerarquico.labels_
                         st.dataframe(InformacionJerarquico,use_container_width=True)
                         EstadoJ=2
-                    else:
-                        st.write("El numero de clusters debe ser positivo")
+                else:
+                    st.write("El numero de clusters debe ser positivo")
         
         with col4:
             with st.expander("**Grafica de los cluster**"):
