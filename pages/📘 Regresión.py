@@ -17,6 +17,7 @@ st.set_page_config(
     layout="wide",  
 )
 
+#Contenedor para el archivo de informacion fuente.
 with st.container():
     st.markdown("# Regresion Logística")
     st.write("----")
@@ -30,6 +31,7 @@ else:
 
     tab1,tab2=st.tabs(["Resumen de la informacion", "Aplicación del algoritmo"])
 
+    #Resumen de la informacion
     with tab1:
         variables = st.text_input('Inserta las variables a eliminar, el nombre litera de la variable, separadas por coma y espacio: Var1, Var2, etc')
 
@@ -39,6 +41,7 @@ else:
             with st.expander("**Información insertada**"):
                 st.dataframe(Informacion)
 
+        #Calculo de las correlaciones
         with col2:
             with st.expander("**Matriz de correlaciones**"):
                 CorrInformacion = Informacion.corr(method='pearson')
@@ -63,6 +66,7 @@ else:
                     st.dataframe(Informacion,use_container_width=True)
                     Estado=1
 
+    #Aplicacion de los algoritmos
     with tab2:   
         col3, col4 = st.columns(2)
         if Estado==1:
@@ -96,6 +100,7 @@ else:
                                                                                     random_state = 0,
                                                                                     shuffle = True)
 
+                #Aplicacion del algoritmo
                 ClasificacionRL = linear_model.LogisticRegression()
                 ClasificacionRL.fit(X_train, Y_train)
                 Y_ClasificacionRL = ClasificacionRL.predict(X_validation)

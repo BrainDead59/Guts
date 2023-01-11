@@ -12,6 +12,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+    #Contenedor para el archivo de informacion fuente.
 with st.container():
     st.markdown("# Apriori")
     st.write("----")
@@ -23,6 +24,7 @@ else:
     DatosTransacciones = pd.read_csv(data, header=None)
     TransaccionesLista = DatosTransacciones.stack().groupby(level=0).apply(list).tolist()
 
+    #Conteo de la frecuencia de elementos
     Transacciones = DatosTransacciones.values.reshape(-1).tolist()
     Lista = pd.DataFrame(Transacciones)
     Lista['Frecuencia'] = 1
@@ -32,6 +34,7 @@ else:
 
     tab1,tab2=st.tabs(["Resumen de la informacion", "Aplicación del algoritmo"])
 
+    #Resumen de la informacion
     with tab1:
         
         col1, col2= st.columns(2)
@@ -52,7 +55,7 @@ else:
             grafica=plt.gcf()
             st.pyplot(grafica)
 
-
+    #Aplicacion del algoritmo
     with tab2:
         col4, col5= st.columns(2)
 
@@ -64,6 +67,7 @@ else:
         if soporte <= 0.0 or soporte <= 0:
             st.write('El soporte debe ser mayor que cero')
         else:
+            #Aplicacion del algoritmo
             ReglasC1 = apriori(TransaccionesLista, 
                         min_support=float(soporte), 
                         min_confidence=float(confianza), 

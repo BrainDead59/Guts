@@ -20,6 +20,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+#Contenedor para el archivo de informacion fuente.
 with st.container():
     st.markdown("# Clustering")
     st.write("----")
@@ -38,6 +39,8 @@ else:
     EstadoJ=0
     EstadoP=0
 
+
+    #Resumen de la informacion
     with tab1:
         variables = st.text_input('Inserta las variables a eliminar, el nombre literal de la variable, separadas por coma y espacio: Var1, Var2, etc')
 
@@ -47,6 +50,7 @@ else:
             with st.expander("**Información insertada**"):
                 st.dataframe(InformacionJ)
 
+        #Calculo de las correlaciones
         with col2:
             with st.expander("**Matriz de correlaciones**"):
                 CorrInformacionJ = InformacionJ.corr(method='pearson')
@@ -55,7 +59,8 @@ else:
                 sns.heatmap(CorrInformacionJ, cmap='RdBu_r', annot=True, mask=MatrizInf)
                 grafica=plt.gcf()
                 st.pyplot(grafica)
-        
+
+        #Estandarizacion de los datos
         if len(variables)==0:
             st.write(" ")
         elif variables=="Ninguna":
@@ -82,6 +87,7 @@ else:
                     st.dataframe(MEstandarizada,use_container_width=True)
                     EstadoME=1
     
+    #Aplicacion del algoritmo de clustering Jerarquico
     with tab2:
         col3, col4 = st.columns(2)
 
@@ -135,7 +141,8 @@ else:
                 Arbol = shc.dendrogram(shc.linkage(MEstandarizada, method='complete', metric='euclidean')) 
                 grafica=plt.gcf()
                 st.pyplot(grafica)
-    
+
+    #Aplicacion del algoritmo de clustering Particional
     with tab3:
         if EstadoME==1:
             col5,col6=st.columns(2)
@@ -165,6 +172,7 @@ else:
                             st.dataframe(InformacionParticional,use_container_width=True)
                             EstadoP=2
 
+                #Aplicacion del algoritmo del codo
                 with col6:
                     with st.expander("**Elbow Method**"):
                         if EstadoP==2:

@@ -27,6 +27,7 @@ st.markdown("---")
 
 col3, col4, col5, col6=st.columns(4)
 
+    #Descripcion de cada uno de los algoritmos
 with col3:
     st.markdown("## Apriori ")
     st.markdown("Algoritmo de aprendizaje unsupervisado automático basado en reglas, que se utiliza para encontrar relaciones ocultas en los datos.")
@@ -59,6 +60,7 @@ with col6:
     imagenA = Image.open('recursos/E.png')
     st.image(imagenA,use_column_width=1)
 
+    #Créditos
 st.markdown("---")
 st.write("### Elaborado por: [Brain Dead](https://github.com/BrainDead59)")
 st.write("Imágenes: https://storyset.com")

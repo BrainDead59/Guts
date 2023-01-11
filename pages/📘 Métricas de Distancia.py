@@ -14,6 +14,8 @@ st.set_page_config(
     layout="wide",  
 )
 
+
+#Contenedor para el archivo de informacion fuente.
 with st.container():
     st.markdown("# Métricas de Distancia")
     st.write("----")
@@ -27,6 +29,7 @@ else:
 
     tab1,tab2=st.tabs(["Resumen de la informacion", "Aplicación de los algoritmos"])
 
+    #Resumen de la informacion
     with tab1:
         variables = st.text_input('Inserta las variables a eliminar, el nombre literal de la variable, separadas por coma y espacio: Var1, Var2, etc')
 
@@ -69,7 +72,9 @@ else:
                     MEstandarizada = estandarizar.fit_transform(Informacion)   
                     st.dataframe(MEstandarizada,use_container_width=True)
                     EstadoME=1
-        
+
+
+    #Aplicacion de los algoritmos
     with tab2:
         if EstadoME==1:
             col1, col2, col3 = st.columns(3)
