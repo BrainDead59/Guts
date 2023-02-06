@@ -9,4 +9,4 @@
   <li> Métricas de distancia
 </ul>
 
-<p> En cada una de las vistas, se puede insertar un documento que este adecuado al tipo de algoritmo y ajustas la métricas del algoritmo para obtener los resultado deseados. </p>
+<p> En cada una de las vistas, se puede insertar un documento que este adecuado al tipo de algoritmo, se pueden ajustar las métricas del algoritmo para obtener los resultado deseados. </p>
