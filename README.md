@@ -1,6 +1,5 @@
 <h1>Guts</h1> 
-<p>Proyecto elaborado para la materia de IA. Consiste en varios algoritmos de aprendizaje implementados en Python. Utilizando el framework Streamlit, que sirve para poder
-realizar todo el desarrollo de la página web y de los algoritmos.<p/>
+<p>Proyecto elaborado para la materia de IA. Consiste en varios algoritmos de aprendizaje implementados en Python. Utilizando el framework Streamlit, que sirve para poder realizar todo el desarrollo de la página web y de los algoritmos. Utilizando el editor Visual Studio Code<p/>
 
 <h2>Algoritmos implementados</h2>
 <ul>
@@ -9,3 +8,5 @@ realizar todo el desarrollo de la página web y de los algoritmos.<p/>
   <li> Reglas de asociación
   <li> Métricas de distancia
 </ul>
+
+<p> En cada una de las vistas, se puede insertar un documento que este adecuado al tipo de algoritmo y ajustas la métricas del algoritmo para obtener los resultado deseados. </p>
