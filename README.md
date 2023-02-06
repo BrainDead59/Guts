@@ -1,4 +1,4 @@
-<h1>Guts</h1> 
+<h1>Gatsu</h1> 
 <p>Proyecto elaborado para la materia de IA. Consiste en varios algoritmos de aprendizaje implementados en Python. Utilizando el framework Streamlit, que sirve para poder realizar todo el desarrollo de la página web y de los algoritmos. Utilizando el editor Visual Studio Code<p/>
 
 <h2>Algoritmos implementados</h2>
