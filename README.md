@@ -10,3 +10,7 @@
 </ul>
 
 <p> En cada una de las vistas, se puede insertar un documento que este adecuado al tipo de algoritmo, se pueden ajustar las métricas del algoritmo para obtener los resultado deseados. </p>
+
+<div align="center">
+    <img src="https://github.com/BrainDead59/Guts/blob/main/README/Guts.PNG" width="700" height="300">
+</div>
